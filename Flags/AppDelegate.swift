@@ -13,7 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        setupContainers()
+        
         return true
     }
 
@@ -34,3 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//MARK: DI Container configurations
+extension AppDelegate {
+    
+    func setupContainers(){
+        let container = Container.shared
+        
+        let apiConfiguration = DefaultAppConfiguration().apiConfiguration
+        let apiService = UrlSessionApiService(configuration: apiConfiguration)
+        container.register(type: ApiService.self, component: apiService)
+    }
+}
