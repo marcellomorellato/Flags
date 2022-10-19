@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// URLSession implementation of ApiService
 class UrlSessionApiService: ApiService{
     
     var configuration: ApiConfiguration

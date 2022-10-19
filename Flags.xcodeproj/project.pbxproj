@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADB09B4C2900514A009D8D8D /* CountryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB09B4B2900514A009D8D8D /* CountryDetailVC.swift */; };
+		ADB09B4E2900516E009D8D8D /* CountryDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB09B4D2900516E009D8D8D /* CountryDetailVM.swift */; };
+		ADB09B50290051ED009D8D8D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB09B4F290051ED009D8D8D /* MainCoordinator.swift */; };
+		ADB09B5229005280009D8D8D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB09B5129005280009D8D8D /* Coordinator.swift */; };
+		ADB09B5429005377009D8D8D /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB09B5329005377009D8D8D /* BaseVC.swift */; };
 		ADB4221128FDF0A2002D5C35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4221028FDF0A2002D5C35 /* AppDelegate.swift */; };
 		ADB4221328FDF0A2002D5C35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4221228FDF0A2002D5C35 /* SceneDelegate.swift */; };
-		ADB4221528FDF0A2002D5C35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4221428FDF0A2002D5C35 /* ViewController.swift */; };
+		ADB4221528FDF0A2002D5C35 /* CountriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4221428FDF0A2002D5C35 /* CountriesVC.swift */; };
 		ADB4221828FDF0A2002D5C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB4221628FDF0A2002D5C35 /* Main.storyboard */; };
 		ADB4221A28FDF0A3002D5C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB4221928FDF0A3002D5C35 /* Assets.xcassets */; };
 		ADB4221D28FDF0A3002D5C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB4221B28FDF0A3002D5C35 /* LaunchScreen.storyboard */; };
@@ -25,6 +30,8 @@
 		ADB4225628FDF0EA002D5C35 /* ApiService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4224B28FDF0E9002D5C35 /* ApiService+Mock.swift */; };
 		ADB4225728FDF0EA002D5C35 /* UrlSessionApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4224D28FDF0E9002D5C35 /* UrlSessionApiService.swift */; };
 		ADB4225828FDF0EA002D5C35 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4224F28FDF0E9002D5C35 /* Container.swift */; };
+		ADB490A12900064400E3FF41 /* CountriesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB490A02900064400E3FF41 /* CountriesVM.swift */; };
+		ADB490A72900419700E3FF41 /* CountriesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB490A62900419700E3FF41 /* CountriesTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ADB09B4B2900514A009D8D8D /* CountryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailVC.swift; sourceTree = "<group>"; };
+		ADB09B4D2900516E009D8D8D /* CountryDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailVM.swift; sourceTree = "<group>"; };
+		ADB09B4F290051ED009D8D8D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		ADB09B5129005280009D8D8D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		ADB09B5329005377009D8D8D /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		ADB4220D28FDF0A2002D5C35 /* Flags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB4221028FDF0A2002D5C35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB4221228FDF0A2002D5C35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADB4221428FDF0A2002D5C35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADB4221428FDF0A2002D5C35 /* CountriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesVC.swift; sourceTree = "<group>"; };
 		ADB4221728FDF0A2002D5C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADB4221928FDF0A3002D5C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB4221C28FDF0A3002D5C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +79,9 @@
 		ADB4224B28FDF0E9002D5C35 /* ApiService+Mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ApiService+Mock.swift"; sourceTree = "<group>"; };
 		ADB4224D28FDF0E9002D5C35 /* UrlSessionApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlSessionApiService.swift; sourceTree = "<group>"; };
 		ADB4224F28FDF0E9002D5C35 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		ADB4909E28FF050E00E3FF41 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ADB490A02900064400E3FF41 /* CountriesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesVM.swift; sourceTree = "<group>"; };
+		ADB490A62900419700E3FF41 /* CountriesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +112,7 @@
 		ADB4220428FDF0A2002D5C35 = {
 			isa = PBXGroup;
 			children = (
+				ADB4909E28FF050E00E3FF41 /* README.md */,
 				ADB4220F28FDF0A2002D5C35 /* Flags */,
 				ADB4222628FDF0A3002D5C35 /* FlagsTests */,
 				ADB4223028FDF0A3002D5C35 /* FlagsUITests */,
@@ -119,14 +135,12 @@
 			children = (
 				ADB4221028FDF0A2002D5C35 /* AppDelegate.swift */,
 				ADB4221228FDF0A2002D5C35 /* SceneDelegate.swift */,
-				ADB4221428FDF0A2002D5C35 /* ViewController.swift */,
 				ADB4224E28FDF0E9002D5C35 /* Common */,
 				ADB4224028FDF0E8002D5C35 /* Configuration */,
 				ADB4224328FDF0E9002D5C35 /* Model */,
 				ADB4224528FDF0E9002D5C35 /* Networking */,
-				ADB4221628FDF0A2002D5C35 /* Main.storyboard */,
+				ADB4909F28FF07B300E3FF41 /* Presentation */,
 				ADB4221928FDF0A3002D5C35 /* Assets.xcassets */,
-				ADB4221B28FDF0A3002D5C35 /* LaunchScreen.storyboard */,
 				ADB4221E28FDF0A3002D5C35 /* Info.plist */,
 			);
 			path = Flags;
@@ -206,8 +220,25 @@
 			isa = PBXGroup;
 			children = (
 				ADB4224F28FDF0E9002D5C35 /* Container.swift */,
+				ADB09B5129005280009D8D8D /* Coordinator.swift */,
+				ADB09B5329005377009D8D8D /* BaseVC.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		ADB4909F28FF07B300E3FF41 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				ADB490A62900419700E3FF41 /* CountriesTVCell.swift */,
+				ADB4221428FDF0A2002D5C35 /* CountriesVC.swift */,
+				ADB490A02900064400E3FF41 /* CountriesVM.swift */,
+				ADB4221628FDF0A2002D5C35 /* Main.storyboard */,
+				ADB4221B28FDF0A3002D5C35 /* LaunchScreen.storyboard */,
+				ADB09B4B2900514A009D8D8D /* CountryDetailVC.swift */,
+				ADB09B4D2900516E009D8D8D /* CountryDetailVM.swift */,
+				ADB09B4F290051ED009D8D8D /* MainCoordinator.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,17 +372,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB4221528FDF0A2002D5C35 /* ViewController.swift in Sources */,
+				ADB09B50290051ED009D8D8D /* MainCoordinator.swift in Sources */,
+				ADB4221528FDF0A2002D5C35 /* CountriesVC.swift in Sources */,
 				ADB4225828FDF0EA002D5C35 /* Container.swift in Sources */,
 				ADB4225428FDF0EA002D5C35 /* ApiConfiguration+dev.swift in Sources */,
+				ADB09B5429005377009D8D8D /* BaseVC.swift in Sources */,
 				ADB4225228FDF0EA002D5C35 /* Country.swift in Sources */,
 				ADB4225128FDF0EA002D5C35 /* Configuration.swift in Sources */,
+				ADB490A12900064400E3FF41 /* CountriesVM.swift in Sources */,
 				ADB4221128FDF0A2002D5C35 /* AppDelegate.swift in Sources */,
+				ADB09B5229005280009D8D8D /* Coordinator.swift in Sources */,
 				ADB4225528FDF0EA002D5C35 /* ApiService.swift in Sources */,
 				ADB4225028FDF0EA002D5C35 /* DefaultAppConfiguration.swift in Sources */,
 				ADB4225728FDF0EA002D5C35 /* UrlSessionApiService.swift in Sources */,
+				ADB09B4E2900516E009D8D8D /* CountryDetailVM.swift in Sources */,
 				ADB4225328FDF0EA002D5C35 /* ApiConfiguration.swift in Sources */,
 				ADB4225628FDF0EA002D5C35 /* ApiService+Mock.swift in Sources */,
+				ADB490A72900419700E3FF41 /* CountriesTVCell.swift in Sources */,
+				ADB09B4C2900514A009D8D8D /* CountryDetailVC.swift in Sources */,
 				ADB4221328FDF0A2002D5C35 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

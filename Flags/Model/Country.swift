@@ -30,3 +30,14 @@ struct Country: Decodable {
     
 }
 
+enum ImageError: Error {
+    case invalidUrl
+    case downloadFailed
+}
+
+extension Country {
+    func flagImageURL() -> URL? {
+        let url = URL(string: flags.png)
+        return url
+    }
+}
