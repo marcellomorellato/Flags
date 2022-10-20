@@ -9,9 +9,9 @@ import UIKit
 import Combine
 
 class CountriesVC: BaseVC {
-    var viewModel = CountriesVM()
+    private var viewModel = CountriesVM()
     @IBOutlet weak var mainTableView: UITableView!
-    var subscriptions = Set<AnyCancellable>()
+    private var subscriptions = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +60,7 @@ extension CountriesVC: UITableViewDelegate, UITableViewDataSource {
             return
         }
         
-        
+        coordinator?.startCountryDetail(country: country)
     }
     
 }

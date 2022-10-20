@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class MainCoordinator: NSObject, Coordinator {
+    
     var childCoordinators = [Coordinator]()
     
     var navigationController: UINavigationController
@@ -25,11 +26,13 @@ class MainCoordinator: NSObject, Coordinator {
         let vc = CountriesVC.instantiate()
         vc.coordinator = self
         navigationController.setViewControllers([vc], animated: true)
-        self.navigationController.setNavigationBarHidden(true, animated: false)
     }
     
-    func startCountryDetail(){
-        
+    func startCountryDetail(country: Country){
+        let vc = CountryDetailVC.instantiate()
+        vc.viewModel = CountryDetailVM(country: country)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
     
 }

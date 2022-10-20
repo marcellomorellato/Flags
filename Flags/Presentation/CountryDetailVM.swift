@@ -8,5 +8,10 @@
 import Foundation
 
 class CountryDetailVM {
+    var country: Country
+    
+    init(country: Country) {
+        self.country = country
+    }
     
 }
