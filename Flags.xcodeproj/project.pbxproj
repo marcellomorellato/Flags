@@ -18,7 +18,7 @@
 		ADB4221828FDF0A2002D5C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB4221628FDF0A2002D5C35 /* Main.storyboard */; };
 		ADB4221A28FDF0A3002D5C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB4221928FDF0A3002D5C35 /* Assets.xcassets */; };
 		ADB4221D28FDF0A3002D5C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB4221B28FDF0A3002D5C35 /* LaunchScreen.storyboard */; };
-		ADB4222828FDF0A3002D5C35 /* FlagsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4222728FDF0A3002D5C35 /* FlagsTests.swift */; };
+		ADB4222828FDF0A3002D5C35 /* ApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4222728FDF0A3002D5C35 /* ApiServiceTests.swift */; };
 		ADB4223228FDF0A3002D5C35 /* FlagsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4223128FDF0A3002D5C35 /* FlagsUITests.swift */; };
 		ADB4223428FDF0A3002D5C35 /* FlagsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4223328FDF0A3002D5C35 /* FlagsUITestsLaunchTests.swift */; };
 		ADB4225028FDF0EA002D5C35 /* DefaultAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB4224128FDF0E8002D5C35 /* DefaultAppConfiguration.swift */; };
@@ -66,7 +66,7 @@
 		ADB4221C28FDF0A3002D5C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADB4221E28FDF0A3002D5C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADB4222328FDF0A3002D5C35 /* FlagsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlagsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADB4222728FDF0A3002D5C35 /* FlagsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsTests.swift; sourceTree = "<group>"; };
+		ADB4222728FDF0A3002D5C35 /* ApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTests.swift; sourceTree = "<group>"; };
 		ADB4222D28FDF0A3002D5C35 /* FlagsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlagsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB4223128FDF0A3002D5C35 /* FlagsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsUITests.swift; sourceTree = "<group>"; };
 		ADB4223328FDF0A3002D5C35 /* FlagsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		ADB4222628FDF0A3002D5C35 /* FlagsTests */ = {
 			isa = PBXGroup;
 			children = (
-				ADB4222728FDF0A3002D5C35 /* FlagsTests.swift */,
+				ADB4222728FDF0A3002D5C35 /* ApiServiceTests.swift */,
 			);
 			path = FlagsTests;
 			sourceTree = "<group>";
@@ -398,7 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB4222828FDF0A3002D5C35 /* FlagsTests.swift in Sources */,
+				ADB4222828FDF0A3002D5C35 /* ApiServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

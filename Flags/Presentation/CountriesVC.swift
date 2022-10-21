@@ -10,6 +10,7 @@ import Combine
 
 class CountriesVC: BaseVC {
     private var viewModel = CountriesVM()
+    @IBOutlet weak var courtesyView: UIView!
     @IBOutlet weak var mainTableView: UITableView!
     private var subscriptions = Set<AnyCancellable>()
     
@@ -22,18 +23,34 @@ class CountriesVC: BaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        Task {
-            await self.viewModel.fetchData()
-        }
+        self.refreshData()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     func setup(){
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "refresh", style: .plain, target: self, action: #selector(refreshData))
+        
         viewModel.$countries.receive(on: DispatchQueue.main)
             .sink { [weak self] countries in
+                
+                let hasData = countries?.count ?? 0 > 0
+                self?.mainTableView.isHidden = !hasData
+                self?.courtesyView.isHidden = hasData
+                
             self?.mainTableView.reloadData()
         }.store(in: &subscriptions)
     }
 
+    @objc func refreshData(){
+        Task {
+            await self.viewModel.fetchData()
+        }
+    }
 }
 
 //MARK: tableView

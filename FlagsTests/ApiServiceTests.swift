@@ -9,17 +9,16 @@
 import XCTest
 @testable import Flags
 
-final class FlagsTests: XCTestCase {
+final class ApiServiceTests: XCTestCase {
     
     var apiService: ApiService?
     
     override func setUpWithError() throws {
         apiService = Container.shared.resolve(type: ApiService.self)
     }
-
+    
     func testGetAllFlags() throws {
-        
-        let expectation = expectation(description: "receive async response")
+        let expectation = expectation(description: "receive valid response")
         
         apiService?.getCountries { result in
             switch result{
@@ -33,7 +32,7 @@ final class FlagsTests: XCTestCase {
             expectation.fulfill()
         }
         
-        waitForExpectations(timeout: 60) { error in
+        waitForExpectations(timeout: 30) { error in
             if let error = error { XCTFail("waitForExpectationsWithTimeout errored: \(error)") }
         }
     }

@@ -21,6 +21,7 @@ class CountriesVM {
             case .success(let countries):
                 self.countries = countries
             case .failure(let error):
+                self.countries = nil
                 print(error)
             }
         }
