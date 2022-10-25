@@ -17,24 +17,23 @@ final class ApiServiceTests: XCTestCase {
         apiService = Container.shared.resolve(type: ApiService.self)
     }
     
-    func testGetAllFlags() throws {
+    func testGetAllFlags() async throws {
         let expectation = expectation(description: "receive valid response")
         
-        apiService?.getCountries { result in
-            switch result{
-            case .success(let data):
-                XCTAssertNotNil(data)
-                print("found \(data.count) items")
-            case .failure(let error):
-                XCTAssertNil(error, error.localizedDescription)
-            }
-            
+        do {
+            let countries = try await apiService?.getCountries()
+            XCTAssertNotNil(countries)
+            print("found \(countries!.count) items")
             expectation.fulfill()
         }
-        
-        waitForExpectations(timeout: 30) { error in
-            if let error = error { XCTFail("waitForExpectationsWithTimeout errored: \(error)") }
+        catch {
+            XCTAssertNil(error, error.localizedDescription)
         }
+        
+        await waitForExpectations(timeout: 30) { error in
+                    if let error = error { XCTFail("waitForExpectationsWithTimeout errored: \(error)") }
+                }
+        
     }
 
 }

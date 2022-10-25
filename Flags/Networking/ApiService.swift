@@ -18,6 +18,5 @@ enum ApiServiceError: Error {
 
 
 protocol ApiService: AnyObject {
-    
-    func getCountries(result: @escaping (Result<[Country], ApiServiceError>) -> Void)
+    func getCountries() async throws -> [Country]
 }

@@ -16,14 +16,11 @@ class CountriesVM {
     }
     
     func fetchData() async {
-        service.getCountries { result in
-            switch result {
-            case .success(let countries):
-                self.countries = countries
-            case .failure(let error):
-                self.countries = nil
-                print(error)
-            }
+        do {
+            self.countries = try await self.service.getCountries()
+        }
+        catch {
+            print(error)
         }
     }
 }
