@@ -16,40 +16,24 @@ class UrlSessionApiService: ApiService{
         self.configuration = configuration
     }
     
-    func getCountries(result: @escaping (Result<[Country], ApiServiceError>) -> Void){
+    func getCountries() async throws -> [Country] {
         
         let method = "/v3.1/all"
-        
         let url = configuration.baseURL.appendingPathComponent(method)
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                    result(.failure(.serverError))
-                    return
+                throw ApiServiceError.serverError
             }
             
-            guard let data = data else {
-                result(.failure(.unknown))
-                return
-            }
-            
-            var decodedData: [Country]?
-            
-            do {
-                decodedData = try JSONDecoder().decode([Country].self, from: data)
-            } catch let error {
-                print(error)
-            }
-            
-            DispatchQueue.main.async {
-                guard let decodedData = decodedData else {
-                    result(.failure(.decodingError))
-                    return
-                }
-                
-                result(.success(decodedData))
-            }
-        }.resume()
+            return try JSONDecoder().decode([Country].self, from: data)
+        }
+        catch {
+            throw error
+        }
+        
     }
 }
 
